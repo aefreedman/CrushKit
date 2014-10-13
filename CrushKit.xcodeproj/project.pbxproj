@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		55BA43C119EC56EE0065B43C /* CrushKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55BA43C019EC56EE0065B43C /* CrushKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55BA43CB19EC56EF0065B43C /* CrushKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA43CA19EC56EF0065B43C /* CrushKitTests.swift */; };
+		55BA43D519EC57B10065B43C /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA43D419EC57B10065B43C /* MyClass.swift */; };
+		55BA43E219EC5DAB0065B43C /* CrushKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55BA43E019EC5DAB0065B43C /* CrushKit.h */; };
+		55BA43E319EC5DAB0065B43C /* Mathf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA43E119EC5DAB0065B43C /* Mathf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		55BA43C619EC56EF0065B43C /* CrushKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrushKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BA43C919EC56EF0065B43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55BA43CA19EC56EF0065B43C /* CrushKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrushKitTests.swift; sourceTree = "<group>"; };
+		55BA43D419EC57B10065B43C /* MyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		55BA43E019EC5DAB0065B43C /* CrushKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrushKit.h; sourceTree = "<group>"; };
+		55BA43E119EC5DAB0065B43C /* Mathf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,11 @@
 		55BA43BD19EC56EE0065B43C /* CrushKit */ = {
 			isa = PBXGroup;
 			children = (
-				55BA43C019EC56EE0065B43C /* CrushKit.h */,
 				55BA43BE19EC56EE0065B43C /* Supporting Files */,
+				55BA43E019EC5DAB0065B43C /* CrushKit.h */,
+				55BA43E119EC5DAB0065B43C /* Mathf.swift */,
+				55BA43C019EC56EE0065B43C /* CrushKit.h */,
+				55BA43D419EC57B10065B43C /* MyClass.swift */,
 			);
 			path = CrushKit;
 			sourceTree = "<group>";
@@ -98,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BA43C119EC56EE0065B43C /* CrushKit.h in Headers */,
+				55BA43E219EC5DAB0065B43C /* CrushKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BA43E319EC5DAB0065B43C /* Mathf.swift in Sources */,
+				55BA43D519EC57B10065B43C /* MyClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,7 @@
 		55BA43CF19EC56EF0065B43C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -305,14 +318,17 @@
 				INFOPLIST_FILE = CrushKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_MODULE_NAME = CrushKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		55BA43D019EC56EF0065B43C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,6 +336,7 @@
 				INFOPLIST_FILE = CrushKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_MODULE_NAME = CrushKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
